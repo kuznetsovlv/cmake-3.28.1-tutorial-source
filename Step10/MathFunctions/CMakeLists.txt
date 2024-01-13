@@ -30,6 +30,9 @@ if(USE_MYMATH)
   target_link_libraries(SqrtLibrary PUBLIC tutorial_compiler_flags)
 
   target_link_libraries(MathFunctions PRIVATE SqrtLibrary)
+
+  set_target_properties(SqrtLibrary PROPERTIES POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS})
+  target_compile_definitions(MathFunctions PRIVATE "EXPORTING_MYMATH")
 endif()
 
 # link MathFunctions to tutorial_compiler_flags
