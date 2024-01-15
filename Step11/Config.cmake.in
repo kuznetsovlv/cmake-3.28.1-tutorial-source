@@ -1,0 +1,2 @@
+@PACAKGE_INIT@
+include("${CMAKE_CURRENT_LIST_DIR}/MathFunctionsTargets.cmake"}
